@@ -157,3 +157,7 @@ and the header will document instructions to migrate from the old to new functio
 
 
 
+vtky changes:
+--------------
+* Modifications have been made to "corecrypto\ccrng\src\ccrng_cryptographic_priv.h".
+* Lines 82-102 and 107-109 commented out to allow compilation.

@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{97CA53BD-CBE5-4C8B-BE69-8A34E90D9170}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>corecrypto_test</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_clang_c2</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_clang_c2</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_clang_c2</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_clang_c2</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;CORECRYPTO_DONOT_USE_TRANSPARENT_UNION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cc;$(ProjectDir)..\..\ccaes;$(ProjectDir)..\..\ccansikdf;$(ProjectDir)..\..\ccasn1;$(ProjectDir)..\..\ccblowfish;$(ProjectDir)..\..\cccast;$(ProjectDir)..\..\cccmac\corecrypto;$(ProjectDir)..\..\cccmac;$(ProjectDir)..\..\ccder;$(ProjectDir)..\..\ccdes;$(ProjectDir)..\..\ccdh;$(ProjectDir)..\..\ccdigest;$(ProjectDir)..\..\ccdrbg;$(ProjectDir)..\..\ccaes\src\vng;$(ProjectDir)..\..\ccn\corecrypto;$(ProjectDir)..\..\ccn;$(ProjectDir)..\..\cctest;$(ProjectDir)..\..\ccsha1;$(ProjectDir)..\..\ccmode;$(ProjectDir)..\..\ccmode\corecrypto;$(ProjectDir)..\..\ccsha2;$(ProjectDir)..\..\cczp;$(ProjectDir)..\..\ccrng;$(ProjectDir)..\..\ccec25519;$(ProjectDir)..\..\ccecies;$(ProjectDir)..\..\ccec;$(ProjectDir)..\..\ccrsa;$(ProjectDir)..\..\ccmd2;$(ProjectDir)..\..\ccmd4;$(ProjectDir)..\..\ccmd5;$(ProjectDir)..\..\cchmac;$(ProjectDir)..\..\ccpbkdf2;$(ProjectDir)..\..\ccwrap;$(ProjectDir)..\..\ccnistkdf;$(ProjectDir)..\..\corecrypto_test;$(ProjectDir)..\..\corecrypto_test\include;$(ProjectDir)..\..\ccmode\crypto_test;$(ProjectDir)..\..\ccmode\src;$(ProjectDir)..\..\ccpad;$(ProjectDir)..\..\ccrc4;$(ProjectDir)..\..\ccrc2;$(ProjectDir)..\..\ccripemd;$(ProjectDir)..\..\ccsrp;$(ProjectDir)..\..\ccsrp\corecrypto;$(ProjectDir)..\..\cc\corecrypto;$(ProjectDir)..\..\ccdh\corecrypto;$(ProjectDir)..\..\ccdrbg\corecrypto;$(ProjectDir)..\..\cchkdf;$(ProjectDir)..\..\ccprime;$(ProjectDir)..\..\corecrypto_test/lib;$(ProjectDir)..\..\ccrng\src;$(ProjectDir)..\..\ccchacha20poly1305;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MSCompatibility>true</MSCompatibility>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../Debug/corecrypto_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cc;$(ProjectDir)..\..\ccaes;$(ProjectDir)..\..\ccansikdf;$(ProjectDir)..\..\ccasn1;$(ProjectDir)..\..\ccblowfish;$(ProjectDir)..\..\cccast;$(ProjectDir)..\..\cccmac\corecrypto;$(ProjectDir)..\..\cccmac;$(ProjectDir)..\..\ccder;$(ProjectDir)..\..\ccdes;$(ProjectDir)..\..\ccdh;$(ProjectDir)..\..\ccdigest;$(ProjectDir)..\..\ccdrbg;$(ProjectDir)..\..\ccaes\src\vng;$(ProjectDir)..\..\ccn\corecrypto;$(ProjectDir)..\..\ccn;$(ProjectDir)..\..\cctest;$(ProjectDir)..\..\ccsha1;$(ProjectDir)..\..\ccmode;$(ProjectDir)..\..\ccmode\corecrypto;$(ProjectDir)..\..\ccsha2;$(ProjectDir)..\..\cczp;$(ProjectDir)..\..\ccrng;$(ProjectDir)..\..\ccec25519;$(ProjectDir)..\..\ccecies;$(ProjectDir)..\..\ccec;$(ProjectDir)..\..\ccrsa;$(ProjectDir)..\..\ccmd2;$(ProjectDir)..\..\ccmd4;$(ProjectDir)..\..\ccmd5;$(ProjectDir)..\..\cchmac;$(ProjectDir)..\..\ccpbkdf2;$(ProjectDir)..\..\ccwrap;$(ProjectDir)..\..\ccnistkdf;$(ProjectDir)..\..\corecrypto_test;$(ProjectDir)..\..\corecrypto_test\include;$(ProjectDir)..\..\ccmode\crypto_test;$(ProjectDir)..\..\ccmode\src;$(ProjectDir)..\..\ccpad;$(ProjectDir)..\..\ccrc4;$(ProjectDir)..\..\ccrc2;$(ProjectDir)..\..\ccripemd;$(ProjectDir)..\..\ccsrp;$(ProjectDir)..\..\ccsrp\corecrypto;$(ProjectDir)..\..\cc\corecrypto;$(ProjectDir)..\..\ccdh\corecrypto;$(ProjectDir)..\..\ccdrbg\corecrypto;$(ProjectDir)..\..\cchkdf;$(ProjectDir)..\..\ccprime;$(ProjectDir)..\..\corecrypto_test/lib;$(ProjectDir)..\..\ccrng\src;$(ProjectDir)..\..\ccchacha20poly1305;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile />
+      <MSCompatibility>true</MSCompatibility>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../x64/Debug/corecrypto_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cc;$(ProjectDir)..\..\ccaes;$(ProjectDir)..\..\ccansikdf;$(ProjectDir)..\..\ccasn1;$(ProjectDir)..\..\ccblowfish;$(ProjectDir)..\..\cccast;$(ProjectDir)..\..\cccmac\corecrypto;$(ProjectDir)..\..\cccmac;$(ProjectDir)..\..\ccder;$(ProjectDir)..\..\ccdes;$(ProjectDir)..\..\ccdh;$(ProjectDir)..\..\ccdigest;$(ProjectDir)..\..\ccdrbg;$(ProjectDir)..\..\ccaes\src\vng;$(ProjectDir)..\..\ccn;$(ProjectDir)..\..\cctest;$(ProjectDir)..\..\ccsha1;$(ProjectDir)..\..\ccmode;$(ProjectDir)..\..\ccmode\corecrypto;$(ProjectDir)..\..\ccsha2;$(ProjectDir)..\..\cczp;$(ProjectDir)..\..\ccrng;$(ProjectDir)..\..\ccec25519;$(ProjectDir)..\..\ccecies;$(ProjectDir)..\..\ccec;$(ProjectDir)..\..\ccrsa;$(ProjectDir)..\..\ccmd2;$(ProjectDir)..\..\ccmd4;$(ProjectDir)..\..\ccmd5;$(ProjectDir)..\..\cchmac;$(ProjectDir)..\..\ccpbkdf2;$(ProjectDir)..\..\ccwrap;$(ProjectDir)..\..\ccnistkdf;$(ProjectDir)..\..\corecrypto_test;$(ProjectDir)..\..\corecrypto_test\include;$(ProjectDir)..\..\ccmode\crypto_test;$(ProjectDir)..\..\ccmode\src;$(ProjectDir)..\..\ccpad;$(ProjectDir)..\..\ccrc4;$(ProjectDir)..\..\ccrc2;$(ProjectDir)..\..\ccripemd;$(ProjectDir)..\..\ccsrp;$(ProjectDir)..\..\ccsrp\corecrypto;$(ProjectDir)..\..\cc\corecrypto;$(ProjectDir)..\..\ccdh\corecrypto;$(ProjectDir)..\..\ccdrbg\corecrypto;$(ProjectDir)..\..\cchkdf;$(ProjectDir)..\..\ccprime;$(ProjectDir)..\..\corecrypto_test/lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MSCompatibility>true</MSCompatibility>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../Release/corecrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cc;$(ProjectDir)..\..\ccaes;$(ProjectDir)..\..\ccansikdf;$(ProjectDir)..\..\ccasn1;$(ProjectDir)..\..\ccblowfish;$(ProjectDir)..\..\cccast;$(ProjectDir)..\..\cccmac\corecrypto;$(ProjectDir)..\..\cccmac;$(ProjectDir)..\..\ccder;$(ProjectDir)..\..\ccdes;$(ProjectDir)..\..\ccdh;$(ProjectDir)..\..\ccdigest;$(ProjectDir)..\..\ccdrbg;$(ProjectDir)..\..\ccaes\src\vng;$(ProjectDir)..\..\ccn\corecrypto;$(ProjectDir)..\..\ccn;$(ProjectDir)..\..\cctest;$(ProjectDir)..\..\ccsha1;$(ProjectDir)..\..\ccmode;$(ProjectDir)..\..\ccmode\corecrypto;$(ProjectDir)..\..\ccsha2;$(ProjectDir)..\..\cczp;$(ProjectDir)..\..\ccrng;$(ProjectDir)..\..\ccec25519;$(ProjectDir)..\..\ccecies;$(ProjectDir)..\..\ccec;$(ProjectDir)..\..\ccrsa;$(ProjectDir)..\..\ccmd2;$(ProjectDir)..\..\ccmd4;$(ProjectDir)..\..\ccmd5;$(ProjectDir)..\..\cchmac;$(ProjectDir)..\..\ccpbkdf2;$(ProjectDir)..\..\ccwrap;$(ProjectDir)..\..\ccnistkdf;$(ProjectDir)..\..\corecrypto_test;$(ProjectDir)..\..\corecrypto_test\include;$(ProjectDir)..\..\ccmode\crypto_test;$(ProjectDir)..\..\ccmode\src;$(ProjectDir)..\..\ccpad;$(ProjectDir)..\..\ccrc4;$(ProjectDir)..\..\ccrc2;$(ProjectDir)..\..\ccripemd;$(ProjectDir)..\..\ccsrp;$(ProjectDir)..\..\ccsrp\corecrypto;$(ProjectDir)..\..\cc\corecrypto;$(ProjectDir)..\..\ccdh\corecrypto;$(ProjectDir)..\..\ccdrbg\corecrypto;$(ProjectDir)..\..\cchkdf;$(ProjectDir)..\..\ccprime;$(ProjectDir)..\..\corecrypto_test/lib;$(ProjectDir)..\..\ccrng\src;$(ProjectDir)..\..\ccchacha20poly1305;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MSCompatibility>true</MSCompatibility>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>../x64/Release/corecrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\CounterMode\KDFCTR_gen.txt" />
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModenocounter\KDFFeedback_gen.txt" />
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModeNOzeroiv\KDFFeedback_gen.txt" />
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModewzeroiv\KDFFeedback_gen.txt" />
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\PipelineModewithCounter\KDFDblPipeline_gen.txt" />
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\PipelineModeWOCounterr\KDFDblPipeline_gen.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ccaes\crypto_test\crypto_test_aes_modes.h" />
+    <ClInclude Include="..\..\ccansikdf\crypto_test\crypto_test_ansikdf.h" />
+    <ClInclude Include="..\..\ccblowfish\crypto_test\crypto_test_blowfish_modes.h" />
+    <ClInclude Include="..\..\cccast\crypto_test\crypto_test_cast_modes.h" />
+    <ClInclude Include="..\..\cccmac\crypto_test\crypto_test_cmac.h" />
+    <ClInclude Include="..\..\ccder\crypto_test\crypto_test_der.h" />
+    <ClInclude Include="..\..\ccdes\crypto_test\crypto_test_des_modes.h" />
+    <ClInclude Include="..\..\ccdh\crypto_test\crypto_test_dh.h" />
+    <ClInclude Include="..\..\ccdigest\crypto_test\crypto_test_digest.h" />
+    <ClInclude Include="..\..\ccecies\crypto_test\crypto_test_ecies.h" />
+    <ClInclude Include="..\..\ccec\crypto_test\crypto_test_ec.h" />
+    <ClInclude Include="..\..\cchmac\crypto_test\crypto_test_hmac.h" />
+    <ClInclude Include="..\..\ccmode\crypto_test\crypto_test_modes.h" />
+    <ClInclude Include="..\..\ccmode\crypto_test\crypto_test_modes_vectors.h" />
+    <ClInclude Include="..\..\ccn\crypto_test\crypto_test_ccn.h" />
+    <ClInclude Include="..\..\ccpad\crypto_test\crypto_test_pad.h" />
+    <ClInclude Include="..\..\ccpbkdf2\crypto_test\crypto_test_pbkdf2.h" />
+    <ClInclude Include="..\..\ccrc2\crypto_test\crypto_test_rc2_modes.h" />
+    <ClInclude Include="..\..\ccrc4\crypto_test\crypto_test_rc4.h" />
+    <ClInclude Include="..\..\ccrng\crypto_test\crypto_test_rng.h" />
+    <ClInclude Include="..\..\ccrsa\crypto_test\crypto_test_rsa.h" />
+    <ClInclude Include="..\..\ccrsa\crypto_test\crypto_test_rsapss.h" />
+    <ClInclude Include="..\..\ccsha1\corecrypto\ccsha1.h" />
+    <ClInclude Include="..\..\ccwrap\crypto_test\crypto_test_wrap.h" />
+    <ClInclude Include="..\..\cczp\crypto_test\crypto_test_cczp_inv.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\cccycles.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\ccstats.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\ccsymmetric.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\ccsymmetric_pad.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\cctime.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\hexToString.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\testbyteBuffer.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\testccnBuffer.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\testcpp.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\testenv.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\testlist.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\testmore.h" />
+    <ClInclude Include="..\..\corecrypto_test\include\test_ccn_diag.h" />
+    <ClInclude Include="..\..\corecrypto_test\lib\ccconstanttime.h" />
+    <ClInclude Include="..\..\corecrypto_test\testlistInc.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\ccaes\crypto_test\aes_validation.c" />
+    <ClCompile Include="..\..\ccaes\crypto_test\crypto_test_aes_modes.c" />
+    <ClCompile Include="..\..\ccansikdf\crypto_test\crypto_test_ansikdf.c" />
+    <ClCompile Include="..\..\ccblowfish\crypto_test\crypto_test_blowfish_modes.c" />
+    <ClCompile Include="..\..\cccast\crypto_test\crypto_test_cast_modes.c" />
+    <ClCompile Include="..\..\ccchacha20poly1305\crypto_test\crypto_test_chacha.c" />
+    <ClCompile Include="..\..\cccmac\crypto_test\crypto_test_cmac.c" />
+    <ClCompile Include="..\..\ccder\crypto_test\crypto_test_der.c" />
+    <ClCompile Include="..\..\ccdes\crypto_test\crypto_test_des_modes.c" />
+    <ClCompile Include="..\..\ccdh\crypto_test\ccdh_test.c" />
+    <ClCompile Include="..\..\ccdh\crypto_test\crypto_test_dh.c" />
+    <ClCompile Include="..\..\ccdigest\crypto_test\crypto_test_digest.c" />
+    <ClCompile Include="..\..\ccdrbg\crypto_test\ccdrbg_limits_test.c" />
+    <ClCompile Include="..\..\ccdrbg\crypto_test\crypto_test_drbg.c" />
+    <ClCompile Include="..\..\ccdrbg\crypto_test\crypto_test_drbg_ctr.c" />
+    <ClCompile Include="..\..\ccdrbg\crypto_test\crypto_test_drbg_hmac.c" />
+    <ClCompile Include="..\..\ccec25519\crypto_test\crypto_test_curve25519.c" />
+    <ClCompile Include="..\..\ccec25519\crypto_test\crypto_test_ed25519.c" />
+    <ClCompile Include="..\..\ccecies\crypto_test\crypto_test_ecies.c" />
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ec.c" />
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ecdh.c" />
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ecdsa.c" />
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_eckeygen.c" />
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ecwrapping.c" />
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ec_import_export.c" />
+    <ClCompile Include="..\..\cchkdf\crypto_test\crypto_test_hkdf.c" />
+    <ClCompile Include="..\..\cchmac\crypto_test\crypto_test_hmac.c" />
+    <ClCompile Include="..\..\ccmode\crypto_test\crypto_test_gcm.c" />
+    <ClCompile Include="..\..\ccmode\crypto_test\crypto_test_modes.c" />
+    <ClCompile Include="..\..\ccmode\crypto_test\crypto_test_xts.c" />
+    <ClCompile Include="..\..\ccmode\xcunit\ccmode_test.c" />
+    <ClCompile Include="..\..\ccnistkdf\crypto_test\crypto_test_nistkdf.c" />
+    <ClCompile Include="..\..\ccn\crypto_test\crypto_test_ccn.c" />
+    <ClCompile Include="..\..\ccpad\crypto_test\crypto_test_pad.c" />
+    <ClCompile Include="..\..\ccpbkdf2\crypto_test\crypto_test_pbkdf2.c" />
+    <ClCompile Include="..\..\ccrc2\crypto_test\crypto_test_rc2_modes.c" />
+    <ClCompile Include="..\..\ccrc4\crypto_test\crypto_test_rc4.c" />
+    <ClCompile Include="..\..\ccrng\crypto_test\ccrng_test.c" />
+    <ClCompile Include="..\..\ccrng\crypto_test\crypto_test_rng.c" />
+    <ClCompile Include="..\..\ccrng\crypto_test\crypto_test_rng_threads.c" />
+    <ClCompile Include="..\..\ccrng\crypto_test\crypto_test_rng_win.c" />
+    <ClCompile Include="..\..\ccrsa\crypto_test\crypto_test_rsa.c" />
+    <ClCompile Include="..\..\ccrsa\crypto_test\crypto_test_rsapkcs1v15.c" />
+    <ClCompile Include="..\..\ccrsa\crypto_test\crypto_test_rsapss.c" />
+    <ClCompile Include="..\..\ccsha2\crypto_test\crypto_test_sha256.c" />
+    <ClCompile Include="..\..\ccsrp\crypto_test\ccsrptest.c" />
+    <ClCompile Include="..\..\ccwrap\crypto_test\crypto_test_wrap.c" />
+    <ClCompile Include="..\..\cczp\crypto_test\cczp_inv_slow.c" />
+    <ClCompile Include="..\..\cczp\crypto_test\crypto_test_cczp.c" />
+    <ClCompile Include="..\..\cczp\crypto_test\crypto_test_cczp_inv.c" />
+    <ClCompile Include="..\..\cc\crypto_test\crypto_test_cc.c" />
+    <ClCompile Include="..\..\corecrypto_dylib\crypto_test\crypto_test_dylib.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccconstanttime.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\cccycles.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccstats.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccsymmetric.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\ccsymmetric_pad.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\cctest_tools.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\hexToString.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testbyteBuffer.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testccnBuffer.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testenv.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testlist.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\testmore.c" />
+    <ClCompile Include="..\..\corecrypto_test\lib\test_ccn_diag.c" />
+    <ClCompile Include="..\..\corecrypto_test\main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCGFSbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCGFSbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCGFSbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCKeySbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCKeySbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCKeySbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarKey128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarKey192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarKey256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarTxt128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarTxt192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarTxt256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ccmVADT128rsp.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ccmVADT192rsp.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ccmVADT256rsp.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128GFSbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128GFSbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128GFSbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128KeySbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128KeySbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128KeySbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarKey128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarKey192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarKey256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarTxt128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarTxt192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarTxt256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8GFSbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8GFSbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8GFSbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8KeySbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8KeySbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8KeySbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarKey128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarKey192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarKey256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarTxt128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarTxt192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarTxt256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBGFSbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBGFSbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBGFSbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBKeySbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBKeySbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBKeySbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarKey128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarKey192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarKey256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarTxt128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarTxt192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarTxt256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\gcmEncryptExtIV128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\gcmEncryptExtIV192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\gcmEncryptExtIV256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBGFSbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBGFSbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBGFSbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBKeySbox128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBKeySbox192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBKeySbox256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarKey128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarKey192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarKey256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarTxt128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarTxt192.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarTxt256.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\XTSGenAES128.inc" />
+    <None Include="..\..\ccaes\crypto_test\inc\XTSGenAES256.inc" />
+    <None Include="..\..\ccec25519\crypto_test\crypto_test_ed25519.inc" />
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\CounterMode\KDFCTR_gen.rsp" />
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModenocounter\KDFFeedback_gen.rsp" />
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModeNOzeroiv\KDFFeedback_gen.rsp" />
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModewzeroiv\KDFFeedback_gen.rsp" />
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\PipelineModewithCounter\KDFDblPipeline_gen.rsp" />
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\PipelineModeWOCounterr\KDFDblPipeline_gen.rsp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

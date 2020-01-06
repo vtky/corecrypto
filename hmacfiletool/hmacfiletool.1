@@ -1,0 +1,23 @@
+.\"
+.\"  hmacfiletool.1
+.\"  corecrypto
+.\"
+.\"  Created on 02/02/2012
+.\"
+.\"  Copyright (c) 2012,2018Apple Inc. All rights reserved.
+.\"
+.Dd 02/02/12
+.Dt hmacfiletool 1
+.Os Darwin
+.Sh NAME
+.Nm hmacfiletool 
+.Nd Calculates integrity HMACs and stores them in the binary
+.Sh DESCRIPTION
+Calculates the expected HMAC of the code segments of the supplied module, and replaces a placeholder value with the calculated HMAC.  This HMAC is used by
+.Ar cc_fips_test
+during the POST integrity checks in
+.Ar launchd ,
+the
+.Ar kernel ,
+and the
+.Ar SEP .

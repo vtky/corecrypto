@@ -1,0 +1,8 @@
+# The Windows virtual machine adds the x attribute to files modified in Windows.
+# This script removes the x attribute.
+
+find . -name "*.c" | xargs chmod a-x
+find . -name "*.h" | xargs chmod a-x
+find . -name "*.vcxproj" | xargs chmod a-x
+find . -name "*.filters" | xargs chmod a-x
+

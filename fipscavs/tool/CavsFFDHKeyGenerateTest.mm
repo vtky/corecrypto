@@ -1,0 +1,172 @@
+/*
+ * Copyright (c) 2017,2018 Apple Inc. All rights reserved.
+ *
+ * corecrypto Internal Use License Agreement
+ *
+ * IMPORTANT:  This Apple corecrypto software is supplied to you by Apple Inc. ("Apple")
+ * in consideration of your agreement to the following terms, and your download or use
+ * of this Apple software constitutes acceptance of these terms.  If you do not agree
+ * with these terms, please do not download or use this Apple software.
+ *
+ * 1.    As used in this Agreement, the term "Apple Software" collectively means and
+ * includes all of the Apple corecrypto materials provided by Apple here, including
+ * but not limited to the Apple corecrypto software, frameworks, libraries, documentation
+ * and other Apple-created materials. In consideration of your agreement to abide by the
+ * following terms, conditioned upon your compliance with these terms and subject to
+ * these terms, Apple grants you, for a period of ninety (90) days from the date you
+ * download the Apple Software, a limited, non-exclusive, non-sublicensable license
+ * under Apple’s copyrights in the Apple Software to make a reasonable number of copies
+ * of, compile, and run the Apple Software internally within your organization only on
+ * devices and computers you own or control, for the sole purpose of verifying the
+ * security characteristics and correct functioning of the Apple Software; provided
+ * that you must retain this notice and the following text and disclaimers in all
+ * copies of the Apple Software that you make. You may not, directly or indirectly,
+ * redistribute the Apple Software or any portions thereof. The Apple Software is only
+ * licensed and intended for use as expressly stated above and may not be used for other
+ * purposes or in other contexts without Apple's prior written permission.  Except as
+ * expressly stated in this notice, no other rights or licenses, express or implied, are
+ * granted by Apple herein.
+ *
+ * 2.    The Apple Software is provided by Apple on an "AS IS" basis.  APPLE MAKES NO
+ * WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES
+ * OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING
+ * THE APPLE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS,
+ * SYSTEMS, OR SERVICES. APPLE DOES NOT WARRANT THAT THE APPLE SOFTWARE WILL MEET YOUR
+ * REQUIREMENTS, THAT THE OPERATION OF THE APPLE SOFTWARE WILL BE UNINTERRUPTED OR
+ * ERROR-FREE, THAT DEFECTS IN THE APPLE SOFTWARE WILL BE CORRECTED, OR THAT THE APPLE
+ * SOFTWARE WILL BE COMPATIBLE WITH FUTURE APPLE PRODUCTS, SOFTWARE OR SERVICES. NO ORAL
+ * OR WRITTEN INFORMATION OR ADVICE GIVEN BY APPLE OR AN APPLE AUTHORIZED REPRESENTATIVE
+ * WILL CREATE A WARRANTY.
+ *
+ * 3.    IN NO EVENT SHALL APPLE BE LIABLE FOR ANY DIRECT, SPECIAL, INDIRECT, INCIDENTAL
+ * OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ * GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING
+ * IN ANY WAY OUT OF THE USE, REPRODUCTION, COMPILATION OR OPERATION OF THE APPLE
+ * SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING
+ * NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ *
+ * 4.    This Agreement is effective until terminated. Your rights under this Agreement will
+ * terminate automatically without notice from Apple if you fail to comply with any term(s)
+ * of this Agreement.  Upon termination, you agree to cease all use of the Apple Software
+ * and destroy all copies, full or partial, of the Apple Software. This Agreement will be
+ * governed and construed in accordance with the laws of the State of California, without
+ * regard to its choice of law rules.
+ *
+ * You may report security issues about Apple products to product-security@apple.com,
+ * as described here:  https://www.apple.com/support/security/.  Non-security bugs and
+ * enhancement requests can be made via https://bugreport.apple.com as described
+ * here: https://developer.apple.com/bug-reporting/
+ *
+ * EA1350
+ * 10/5/15
+ */
+
+extern "C" {
+#include "cavs_common.h"
+#include "cavs_dispatch.h"
+
+#include <corecrypto/ccn.h>
+#include <corecrypto/ccdh.h>
+#include <corecrypto/ccdh_gp.h>
+
+#include "cavs_op_dh_key_gen.h"
+}
+
+#import "CavsFFDHKeyGenerateTest.h"
+
+@interface CavsFFDHKeyGenerateTest (PrivateMethods)
+- (BOOL)runFFDHKeyGenerateTest:(TestFileData *)testData withCounter:(NSInteger)counter;
+- (void)outputUnit:(NSString *)prefix n:(const cc_size)n v:(const cc_unit *)v;
+@end
+
+@implementation CavsFFDHKeyGenerateTest
+
++ (void)setupTest
+{
+    return;
+}
+
++ (void)cleanUpTest
+{
+    return;
+}
+
+- (id)initWithFileParser:(TestFileParser *)fileParser
+    withTestDictionary:(NSDictionary *)testsToRun
+{
+    return [super initWithFileParser:fileParser withTestDictionary:testsToRun];
+}
+
+const char *grp14_q = "7fffffffffffffffe487ed5110b4611a62633145c06e0e689481270"
+        "44533e63a0105df531d89cd9128a5043cc71a026ef7ca8cd9e69d218d98158536f92f"
+        "8a1ba7f09ab6b6a8e122f242dabb312f3f637a262174d31bf6b585ffae5b7a035bf6f"
+        "71c35fdad44cfd2d74f9208be258ff324943328f6722d9ee1003e5c50b1df82cc6d24"
+        "1b0e2ae9cd348b1fd47e9267afc1b2ae91ee51d6cb0e3179ab1042a95dcf6a9483b84"
+        "b4b36b3861aa7255e4c0278ba3604650c10be19482f23171b671df1cf3b960c074301"
+        "cd93c1d17603d147dae2aef837a62964ef15e5fb4aac0b8c1ccaa4be754ab5728ae91"
+        "30c4c7d02880ab9472d455655347fffffffffffffff";
+
+- (void)outputUnit:(NSString *)prefix n:(const cc_size)n v:(const cc_unit *)v
+{
+    size_t sz = ccn_write_int_size(n, v);
+    char buf_p[sz];
+    ccn_write_int(n, v, sz, buf_p);
+    [self outputFormat:@"%@ = %@", prefix, BufToHexString((uint8_t *)buf_p, sz)];
+}
+
+- (BOOL)runTest:(TestFileData *)testData withCounter:(NSInteger)counter
+{
+    int ret;
+
+    ccdh_const_gp_t gp = ccdh_gp_rfc3526group14();
+
+    struct cavs_op_dh_key_gen request;
+    request.vector = CAVS_VECTOR_DH_KEY_GEN;
+    request.cnt = (uint32_t)[testData.nValue intValue];
+
+    size_t len = sizeof(uint32_t) + request.cnt * 2 * ccdh_ccn_size(gp);
+    uint8_t *wksp = NULL;
+    ret = cavs_dispatch(testData.testTarget, request.vector, &request, &wksp, &len);
+    if (ret != CAVS_STATUS_OK) {
+        errorf("failed cavs_dispatch");
+        return NO;
+    }
+
+    len = *(uint32_t *)wksp;
+    if (len != ccdh_ccn_size(gp)) {
+        errorf("returned components match size of group: %zu", len);
+        return NO;
+    }
+
+    /* This is largely hardcoded because the group is fixed at the moment. */
+    [self outputUnit:@"P" n:ccdh_gp_n(gp) v:ccdh_gp_prime(gp)];
+    [self outputFormat:@"Q = %s", grp14_q];
+    [self outputString:@"G = 2"];
+    [self outputString:@""];
+
+    uint8_t *x = wksp + sizeof(uint32_t);
+    uint8_t *y = x + len;
+
+    for (int i = 0; i < request.cnt; i++) {
+        ccdh_full_ctx_decl_gp(gp, key);
+        if (ccdh_import_full(gp, len, x, len, y, key) != 0) {
+            errorf("failed to import key");
+            bufferf(x, len, "x");
+            bufferf(y, len, "y");
+            return NO;
+        }
+
+        [self outputUnit:@"X" n:ccdh_ctx_n(key) v:ccdh_ctx_x(key)];
+        [self outputUnit:@"Y" n:ccdh_ctx_n(key) v:ccdh_ctx_y(key)];
+        [self outputString:@""];
+
+        // Shift it forward.
+        x = y + len;
+        y = x + len;
+    }
+
+    return YES;
+}
+
+@end

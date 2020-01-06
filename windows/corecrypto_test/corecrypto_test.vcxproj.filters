@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="cc">
+      <UniqueIdentifier>{b5e310b0-2109-45af-a79a-87d4f16d7122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccaes">
+      <UniqueIdentifier>{aa8510e7-34fe-4783-acbd-657578568bb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccaes\inc">
+      <UniqueIdentifier>{34997e77-56f8-4b75-bba4-77a274a9fb23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccder">
+      <UniqueIdentifier>{51c6c996-3e99-4bcc-bc84-55895194b8e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccdh">
+      <UniqueIdentifier>{3db84836-9a5c-45f9-a2fd-14d38340f8b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccdigest">
+      <UniqueIdentifier>{994a2c19-7973-4caf-b819-aadf368454d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccdrbg">
+      <UniqueIdentifier>{405546bc-33ea-4346-a6ea-b0c50677c6ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccec">
+      <UniqueIdentifier>{51f6b4cb-468d-4a67-831c-6082c40a6d50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccec25519">
+      <UniqueIdentifier>{0c70e877-0ad5-4574-a7af-99b084058bbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cchkdf">
+      <UniqueIdentifier>{7b460e82-14ed-4690-bcbb-0f03efe77660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cchmac">
+      <UniqueIdentifier>{43e1c43c-72aa-4c27-939c-b10a58b97d1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccmd4">
+      <UniqueIdentifier>{e8166796-8445-40e6-a3c7-4520c4c6ed88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccmd5">
+      <UniqueIdentifier>{67e6d57d-3062-43dc-8647-61780336a236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccmode">
+      <UniqueIdentifier>{8fca4b40-ec66-4205-8288-18b871b57048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccn">
+      <UniqueIdentifier>{2ea57118-3989-4560-af27-65d73062f10f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccnistkdf">
+      <UniqueIdentifier>{4e7c02b5-cec0-460e-8583-0ff2f7e9e3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccnistkdf\NIST_KDF_KATs">
+      <UniqueIdentifier>{c3c0f636-9377-4920-842b-4217778e89ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccnistkdf\NIST_KDF_KATs\CounterMode">
+      <UniqueIdentifier>{dacd20e9-d02b-4301-b808-813a293c9710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccnistkdf\NIST_KDF_KATs\FeedbackModenocounter">
+      <UniqueIdentifier>{977adc1e-a8c1-49ee-8ed1-73f4ed7e2200}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccnistkdf\NIST_KDF_KATs\FeedbackModeNOzeroiv">
+      <UniqueIdentifier>{e5dc96db-a86b-4e0c-9c74-9ce33450e22f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccnistkdf\NIST_KDF_KATs\FeedbackModewzeroiv">
+      <UniqueIdentifier>{911a89ba-6bbc-4fb0-a50d-2bebc17230df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccnistkdf\NIST_KDF_KATs\PipelineModewithCounter">
+      <UniqueIdentifier>{dc6e2738-48d9-4985-b249-ff178fb1b26a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccnistkdf\NIST_KDF_KATs\PipelineModeWOCounterr">
+      <UniqueIdentifier>{5b485fc0-2fb5-40f2-b11e-d0a0d211f542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccpad">
+      <UniqueIdentifier>{b42a689e-6d7b-4443-8a23-a6c81462dc9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccpbkdf2">
+      <UniqueIdentifier>{f093e14f-555a-4044-a501-335949e2f92c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccrng">
+      <UniqueIdentifier>{00f2fd13-3c42-4b8f-8f9e-520c14c6517a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccrsa">
+      <UniqueIdentifier>{2ddedf1c-8219-4ca1-8ab0-bb507ac0860e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccsha1">
+      <UniqueIdentifier>{b1ba6c44-a4f4-429e-aa10-b27201fdea6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccsha2">
+      <UniqueIdentifier>{2bf2704d-2d32-4406-88dc-ba5c446b1103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccsrp">
+      <UniqueIdentifier>{8026dea0-218a-4e68-a1a0-a80edc45f36d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccwrap">
+      <UniqueIdentifier>{bdbe4044-f1fc-4d65-86a6-6bdd31c8c713}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cczp">
+      <UniqueIdentifier>{92668f9c-d72c-434c-97b3-16f08507be9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="corecrypto_test">
+      <UniqueIdentifier>{a0e8ae77-d2e7-4505-9e08-02b74f9ed6fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cc_fips_test">
+      <UniqueIdentifier>{bda274b7-fda5-4ac6-a88d-2f37c719ae83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccansikdf">
+      <UniqueIdentifier>{dc742a35-6053-4274-905a-063e49bd696d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccasn1">
+      <UniqueIdentifier>{964d59b0-4dd7-46da-97a7-b2ab23bb8d40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccblowfish">
+      <UniqueIdentifier>{2ad01cbf-b13b-4b4a-8aba-c831db83cab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cccast">
+      <UniqueIdentifier>{f71ba3d4-5672-494e-877d-4e4cd737db32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cccmac">
+      <UniqueIdentifier>{1a635c5c-3e7b-4fbb-b1a4-65fdbab2ea91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccdes">
+      <UniqueIdentifier>{ef9fec0a-6ce8-40a0-b108-f8607379a521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccecies">
+      <UniqueIdentifier>{fd8e6acd-ff7c-4f9e-b706-e8f330ae449f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccmd2">
+      <UniqueIdentifier>{30c8a140-617f-47de-9898-dc85ec3cb3e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccprime">
+      <UniqueIdentifier>{60deceaf-5121-4b50-aade-543ae1b0586b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccrc2">
+      <UniqueIdentifier>{a5a5abf1-0f50-4258-a98d-faa737a218e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccrc4">
+      <UniqueIdentifier>{1e3b4f83-6f47-4ab0-a4e0-f4fb7776fe62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccripemd">
+      <UniqueIdentifier>{99d2984b-8937-4939-918a-0e7cd8822291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccz">
+      <UniqueIdentifier>{780b665a-22c0-439c-ac68-b99d7aafa8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccmode\xcunit">
+      <UniqueIdentifier>{9fcd490a-af06-4b4f-9f5f-477bddcface0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="corecrypto_dylib">
+      <UniqueIdentifier>{21bdbadf-f23f-4e72-bcc8-72c0e3a844d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ccchacha20poly1305">
+      <UniqueIdentifier>{cd34bf72-e72e-4936-b1de-2b0e4a8c5c6c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\CounterMode\KDFCTR_gen.txt">
+      <Filter>ccnistkdf\NIST_KDF_KATs\CounterMode</Filter>
+    </Text>
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModenocounter\KDFFeedback_gen.txt">
+      <Filter>ccnistkdf\NIST_KDF_KATs\FeedbackModenocounter</Filter>
+    </Text>
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModeNOzeroiv\KDFFeedback_gen.txt">
+      <Filter>ccnistkdf\NIST_KDF_KATs\FeedbackModeNOzeroiv</Filter>
+    </Text>
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModewzeroiv\KDFFeedback_gen.txt">
+      <Filter>ccnistkdf\NIST_KDF_KATs\FeedbackModewzeroiv</Filter>
+    </Text>
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\PipelineModewithCounter\KDFDblPipeline_gen.txt">
+      <Filter>ccnistkdf\NIST_KDF_KATs\PipelineModewithCounter</Filter>
+    </Text>
+    <Text Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\PipelineModeWOCounterr\KDFDblPipeline_gen.txt">
+      <Filter>ccnistkdf\NIST_KDF_KATs\PipelineModeWOCounterr</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\lib\ccconstanttime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\testlistInc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\cccycles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\ccstats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\ccsymmetric.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\ccsymmetric_pad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\cctime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\hexToString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\test_ccn_diag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\testbyteBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\testccnBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\testcpp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\testenv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\testlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\corecrypto_test\include\testmore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccaes\crypto_test\crypto_test_aes_modes.h">
+      <Filter>ccaes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccder\crypto_test\crypto_test_der.h">
+      <Filter>ccder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccdh\crypto_test\crypto_test_dh.h">
+      <Filter>ccdh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccdigest\crypto_test\crypto_test_digest.h">
+      <Filter>ccdigest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccec\crypto_test\crypto_test_ec.h">
+      <Filter>ccec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cchmac\crypto_test\crypto_test_hmac.h">
+      <Filter>cchmac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccmode\crypto_test\crypto_test_modes.h">
+      <Filter>ccmode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccmode\crypto_test\crypto_test_modes_vectors.h">
+      <Filter>ccmode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccn\crypto_test\crypto_test_ccn.h">
+      <Filter>ccn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccpad\crypto_test\crypto_test_pad.h">
+      <Filter>ccpad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccpbkdf2\crypto_test\crypto_test_pbkdf2.h">
+      <Filter>ccpbkdf2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccrng\crypto_test\crypto_test_rng.h">
+      <Filter>ccrng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccrsa\crypto_test\crypto_test_rsa.h">
+      <Filter>ccrsa</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccrsa\crypto_test\crypto_test_rsapss.h">
+      <Filter>ccrsa</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccsha1\corecrypto\ccsha1.h">
+      <Filter>ccsha1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccwrap\crypto_test\crypto_test_wrap.h">
+      <Filter>ccwrap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cczp\crypto_test\crypto_test_cczp_inv.h">
+      <Filter>cczp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccansikdf\crypto_test\crypto_test_ansikdf.h">
+      <Filter>ccansikdf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccblowfish\crypto_test\crypto_test_blowfish_modes.h">
+      <Filter>ccblowfish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cccast\crypto_test\crypto_test_cast_modes.h">
+      <Filter>cccast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cccmac\crypto_test\crypto_test_cmac.h">
+      <Filter>cccmac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccdes\crypto_test\crypto_test_des_modes.h">
+      <Filter>ccdes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccrc2\crypto_test\crypto_test_rc2_modes.h">
+      <Filter>ccrc2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccrc4\crypto_test\crypto_test_rc4.h">
+      <Filter>ccrc4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ccecies\crypto_test\crypto_test_ecies.h">
+      <Filter>ccecies</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\cc\crypto_test\crypto_test_cc.c">
+      <Filter>cc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccaes\crypto_test\aes_validation.c">
+      <Filter>ccaes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccaes\crypto_test\crypto_test_aes_modes.c">
+      <Filter>ccaes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccder\crypto_test\crypto_test_der.c">
+      <Filter>ccder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccdh\crypto_test\crypto_test_dh.c">
+      <Filter>ccdh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccdh\crypto_test\ccdh_test.c">
+      <Filter>ccdh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccdigest\crypto_test\crypto_test_digest.c">
+      <Filter>ccdigest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccdrbg\crypto_test\crypto_test_drbg_ctr.c">
+      <Filter>ccdrbg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccdrbg\crypto_test\crypto_test_drbg_hmac.c">
+      <Filter>ccdrbg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccdrbg\crypto_test\ccdrbg_limits_test.c">
+      <Filter>ccdrbg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccdrbg\crypto_test\crypto_test_drbg.c">
+      <Filter>ccdrbg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ec_import_export.c">
+      <Filter>ccec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ecdh.c">
+      <Filter>ccec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ecdsa.c">
+      <Filter>ccec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_eckeygen.c">
+      <Filter>ccec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ecwrapping.c">
+      <Filter>ccec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccec\crypto_test\crypto_test_ec.c">
+      <Filter>ccec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccec25519\crypto_test\crypto_test_ed25519.c">
+      <Filter>ccec25519</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccec25519\crypto_test\crypto_test_curve25519.c">
+      <Filter>ccec25519</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cchkdf\crypto_test\crypto_test_hkdf.c">
+      <Filter>cchkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cchmac\crypto_test\crypto_test_hmac.c">
+      <Filter>cchmac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccmode\crypto_test\crypto_test_modes.c">
+      <Filter>ccmode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccmode\crypto_test\crypto_test_gcm.c">
+      <Filter>ccmode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccn\crypto_test\crypto_test_ccn.c">
+      <Filter>ccn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccnistkdf\crypto_test\crypto_test_nistkdf.c">
+      <Filter>ccnistkdf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccpad\crypto_test\crypto_test_pad.c">
+      <Filter>ccpad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccpbkdf2\crypto_test\crypto_test_pbkdf2.c">
+      <Filter>ccpbkdf2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrng\crypto_test\crypto_test_rng.c">
+      <Filter>ccrng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrsa\crypto_test\crypto_test_rsapss.c">
+      <Filter>ccrsa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrsa\crypto_test\crypto_test_rsa.c">
+      <Filter>ccrsa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccsha2\crypto_test\crypto_test_sha256.c">
+      <Filter>ccsha2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccsrp\crypto_test\ccsrptest.c">
+      <Filter>ccsrp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccwrap\crypto_test\crypto_test_wrap.c">
+      <Filter>ccwrap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cczp\crypto_test\crypto_test_cczp_inv.c">
+      <Filter>cczp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cczp\crypto_test\cczp_inv_slow.c">
+      <Filter>cczp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\ccconstanttime.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\cccycles.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\ccstats.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\ccsymmetric.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\ccsymmetric_pad.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\cctest_tools.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\hexToString.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\main.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\test_ccn_diag.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\testbyteBuffer.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\testccnBuffer.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\testenv.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\testlist.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_test\lib\testmore.c">
+      <Filter>corecrypto_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccansikdf\crypto_test\crypto_test_ansikdf.c">
+      <Filter>ccansikdf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccblowfish\crypto_test\crypto_test_blowfish_modes.c">
+      <Filter>ccblowfish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cccast\crypto_test\crypto_test_cast_modes.c">
+      <Filter>cccast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cccmac\crypto_test\crypto_test_cmac.c">
+      <Filter>cccmac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccdes\crypto_test\crypto_test_des_modes.c">
+      <Filter>ccdes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrc2\crypto_test\crypto_test_rc2_modes.c">
+      <Filter>ccrc2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrc4\crypto_test\crypto_test_rc4.c">
+      <Filter>ccrc4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccmode\xcunit\ccmode_test.c">
+      <Filter>ccmode\xcunit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccecies\crypto_test\crypto_test_ecies.c">
+      <Filter>ccecies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\corecrypto_dylib\crypto_test\crypto_test_dylib.c">
+      <Filter>corecrypto_dylib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrng\crypto_test\crypto_test_rng_threads.c">
+      <Filter>ccrng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\cczp\crypto_test\crypto_test_cczp.c">
+      <Filter>cczp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrng\crypto_test\crypto_test_rng_win.c">
+      <Filter>ccrng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccrsa\crypto_test\crypto_test_rsapkcs1v15.c" />
+    <ClCompile Include="..\..\ccrng\crypto_test\ccrng_test.c">
+      <Filter>ccrng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccmode\crypto_test\crypto_test_xts.c">
+      <Filter>ccmode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ccchacha20poly1305\crypto_test\crypto_test_chacha.c">
+      <Filter>ccchacha20poly1305</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBKeySbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBKeySbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarKey128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarKey192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarKey256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarTxt128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarTxt192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBVarTxt256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\XTSGenAES128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\XTSGenAES256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCGFSbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCGFSbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCGFSbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCKeySbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCKeySbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCKeySbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarKey128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarKey192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarKey256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarTxt128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarTxt192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CBCVarTxt256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ccmVADT128rsp.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ccmVADT192rsp.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ccmVADT256rsp.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8GFSbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8GFSbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8GFSbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8KeySbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8KeySbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8KeySbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarKey128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarKey192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarKey256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarTxt128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarTxt192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB8VarTxt256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128GFSbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128GFSbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128GFSbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128KeySbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128KeySbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128KeySbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarKey128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarKey192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarKey256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarTxt128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarTxt192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\CFB128VarTxt256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBGFSbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBGFSbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBGFSbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBKeySbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBKeySbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBKeySbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarKey128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarKey192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarKey256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarTxt128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarTxt192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\ECBVarTxt256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\gcmEncryptExtIV128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\gcmEncryptExtIV192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\gcmEncryptExtIV256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBGFSbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBGFSbox192.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBGFSbox256.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccaes\crypto_test\inc\OFBKeySbox128.inc">
+      <Filter>ccaes\inc</Filter>
+    </None>
+    <None Include="..\..\ccec25519\crypto_test\crypto_test_ed25519.inc">
+      <Filter>ccec25519</Filter>
+    </None>
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\CounterMode\KDFCTR_gen.rsp">
+      <Filter>ccnistkdf\NIST_KDF_KATs\CounterMode</Filter>
+    </None>
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModenocounter\KDFFeedback_gen.rsp">
+      <Filter>ccnistkdf\NIST_KDF_KATs\FeedbackModenocounter</Filter>
+    </None>
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModeNOzeroiv\KDFFeedback_gen.rsp">
+      <Filter>ccnistkdf\NIST_KDF_KATs\FeedbackModeNOzeroiv</Filter>
+    </None>
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\FeedbackModewzeroiv\KDFFeedback_gen.rsp">
+      <Filter>ccnistkdf\NIST_KDF_KATs\FeedbackModewzeroiv</Filter>
+    </None>
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\PipelineModewithCounter\KDFDblPipeline_gen.rsp">
+      <Filter>ccnistkdf\NIST_KDF_KATs\PipelineModewithCounter</Filter>
+    </None>
+    <None Include="..\..\ccnistkdf\crypto_test\NIST_KDF_KATs\PipelineModeWOCounterr\KDFDblPipeline_gen.rsp">
+      <Filter>ccnistkdf\NIST_KDF_KATs\PipelineModeWOCounterr</Filter>
+    </None>
+  </ItemGroup>
+</Project>
